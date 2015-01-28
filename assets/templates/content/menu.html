@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<input type="hidden" name='slug-field' id='slug-field' value='{{ slug }}' />
+<div id="content" class="stars">
+	<div id="ss-container" class="ss-container">
+		{% for category in categories %}
+	    <div class="ss-row">
+	        <div class="ss-left">
+	            <h2 id="{{ category.slug }}">{{ category.title }}</h2>
+	        </div>
+	        <div class="ss-right">
+	            <h2></h2>
+	        </div>
+	    </div>
+		    {% for item in category.categoryitem_set.all %}
+		    <div class="ss-row ss-medium">
+		        <div class="ss-left">
+		            <a href="#" class="ss-circle ss-circle-1">
+		            	<img src="{{ MEDIA_URL }}{{ item.image }}" title="{{ item.title }}" class="img-responsive" />
+		            </a>
+		        </div>
+		        <div class="ss-right">
+		            <h3>
+		                <a>{{ item.title }}</a>
+		                <span>{{ item.description }}</span>
+		            </h3>
+		        </div>
+		    </div>
+		    {% endfor %}
+	    {% endfor %}
+	    <!-- more rows... -->
+	</div>
+</div>
+{% endblock %}

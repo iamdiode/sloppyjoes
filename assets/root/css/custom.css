@@ -1,0 +1,85 @@
+@font-face {
+	src: url('../fonts/CaviarDreams-webfont.ttf');
+	font-family: 'Caviar';
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Caviar', sans-serif; font-weight: bold; }
+
+.red { color: #D21A10; }
+.blue { color: #22313F; }
+
+.icon i {
+  border: 20px solid #D21A10;
+  border-radius: 50%;
+  color: #D21A10;
+  font-size: 28px;
+  height: 120px;
+  line-height: 80px;
+  width: 120px;
+}
+
+.service-item {
+	text-align: center;
+}
+
+.navbar-inverse {
+	background: rgba(0,0,0,0.8);
+}
+
+.navbar-brand {
+	margin-top: -9px;
+}
+
+.dropdown-menu {
+	background: rgba(0,0,0,0.8);
+}
+
+.dropdown-menu > li > a {
+  clear: both;
+  color: #FFF;
+  display: block;
+  font-weight: 400;
+  line-height: 1.42857;
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:active,
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #FFF;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.footer {
+	background: #D21A10;
+	color: #FFF;
+}
+
+.footer a {
+	color: #F4D03F;
+}
+
+#content {
+  padding-top: 65px;
+  padding-bottom: 20px;
+}
+
+.ss-container, .stars {
+  background: url('../images/stars2.jpg'); 
+}
+
+#map-canvas {
+        width: 650px;
+        height: 650px;
+      }

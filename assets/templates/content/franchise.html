@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div id="content">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-7">
+			<img src="http://placehold.it/400x600" class="img-responsive"/>
+		</div>
+		<div class="col-lg-5">
+			<h2 class="red">Own a Franchise!</h2>
+			<p><i class="fa fa-star"></i>&nbsp;All fields are mandatory</p>
+			{% if error == True %}
+				<p class="bg-danger">{{ message }}{{ form.errors }}</p>
+			{% else %}
+				<p class="bg-success">{{ message }}</p>
+			{% endif %}
+			<form name="franchise-form" method="post" action="#" data-toggle="validator" role="form">
+			{% csrf_token %}
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input name="name" placeholder="Full Name" type="text" id="name" class="form-control" required="required"/>
+					</div>
+				</div>			
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">@</span>
+						<input name="email" placeholder="Email Address" type="email" id="email" class="form-control" required="required"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+						<input name="mobile" placeholder="Mobile Number" type="text" id="mobile" class="form-control" required="required"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+						<textarea name="address" placeholder="Address" id="address" class="form-control" required="required"></textarea>
+					</div>
+				</div>														
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+						<input name="city" placeholder="City" type="text" id="city" class="form-control" required="required"/>
+					</div>
+				</div>							
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-comments"></i></span>
+						<textarea name="comments" id="comments" class="form-control" placeholder="comments" required="required"></textarea>
+					</div>
+				</div>							
+				<div class="form-group">
+					<button type="submit" name="franchise-submit" value="franchise-submit" class="btn btn-primary btn-block">Submit</button>
+				</div>
+			</form> 
+			<p><a href="#" style="font-size: 2em;">Download</a> Our Brochure</p>
+			<h3 class="red">Contact</h3>
+
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}
